@@ -1,0 +1,5106 @@
+{
+  "format": "graph-model",
+  "userDefinedMetadata": {
+    "signature": {
+      "outputs": { "SemanticPredictions": { "name": "SemanticPredictions" } }
+    }
+  },
+  "modelTopology": {
+    "node": [
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
+        },
+        "name": "sub_1/x",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "2" }] }
+            }
+          }
+        },
+        "name": "stack_2",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [{ "size": "1" }, { "size": "1" }, { "size": "3" }]
+              }
+            }
+          }
+        },
+        "name": "Reshape",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
+        },
+        "name": "stack/0",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": { "tensor": { "dtype": "DT_FLOAT", "tensorShape": {} } }
+        },
+        "name": "mul_1/x",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": { "tensor": { "dtype": "DT_FLOAT", "tensorShape": {} } }
+        },
+        "name": "ToFloat/x",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "384" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_7/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "384" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_8/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "384" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_9/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "384" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_10/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "576" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_11/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "576" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_12/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "2" }, { "size": "2" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/paddings",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "576" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_13/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "2" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "2" }, { "size": "2" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_7/depthwise/depthwise/BatchToSpaceND/crops",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "960" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_14/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "960" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_15/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "2" }, { "size": "2" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND/paddings",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "960" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_16/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "2" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND/block_shape",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "2" }, { "size": "2" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_14/depthwise/depthwise/BatchToSpaceND/crops",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "256" },
+                  { "size": "21" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "logits/semantic/weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "21" }] }
+            }
+          }
+        },
+        "name": "logits/semantic/biases",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "2" }] }
+            }
+          }
+        },
+        "name": "ResizeBilinear_1/size",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "2" }] }
+            }
+          }
+        },
+        "name": "strided_slice_7",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
+        },
+        "name": "Rank",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "3" }] }
+            }
+          }
+        },
+        "name": "SemanticPredictions/begin",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": { "tensor": { "dtype": "DT_INT32", "tensorShape": {} } }
+        },
+        "name": "SemanticPredictions/size/0",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
+          }
+        },
+        "name": "strided_slice_3/stack",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_UINT8" },
+          "shape": {
+            "shape": {
+              "dim": [
+                { "size": "1" },
+                { "size": "-1" },
+                { "size": "-1" },
+                { "size": "3" }
+              ]
+            }
+          }
+        },
+        "name": "ImageTensor",
+        "op": "Placeholder"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
+          }
+        },
+        "name": "strided_slice_7/stack_1",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
+          }
+        },
+        "name": "strided_slice_4/stack_1",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_INT32" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_INT32",
+              "tensorShape": { "dim": [{ "size": "1" }] }
+            }
+          }
+        },
+        "name": "strided_slice_4/stack",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "32" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/Conv/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "32" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/Conv/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "960" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_15/depthwise/BatchNorm/FusedBatchNorm/Offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "32" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "32" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv/depthwise/depthwise_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "32" },
+                  { "size": "16" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "16" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "16" },
+                  { "size": "96" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_1/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "96" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_1/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "96" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_1/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "96" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_1/depthwise/depthwise_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "96" },
+                  { "size": "24" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_1/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "960" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_14/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "24" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_1/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "24" },
+                  { "size": "144" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_2/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "144" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_2/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "144" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_2/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "144" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_2/depthwise/depthwise_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "144" },
+                  { "size": "24" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_2/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "960" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_14/depthwise/BatchNorm/FusedBatchNorm/Offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "24" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_2/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "24" },
+                  { "size": "144" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_3/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "144" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_3/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "144" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_3/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "144" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_3/depthwise/depthwise_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "144" },
+                  { "size": "32" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_3/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "32" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_3/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "32" },
+                  { "size": "192" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_4/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_13/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_4/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "192" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_4/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_4/depthwise/depthwise_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "192" },
+                  { "size": "32" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_4/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "32" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_4/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "32" },
+                  { "size": "192" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_5/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_13/depthwise/BatchNorm/FusedBatchNorm/Offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_5/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "192" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_5/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_5/depthwise/depthwise_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "192" },
+                  { "size": "32" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_5/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "32" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_5/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "32" },
+                  { "size": "192" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_6/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_6/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_12/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "3" },
+                  { "size": "3" },
+                  { "size": "192" },
+                  { "size": "1" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_6/depthwise/depthwise_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "192" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_6/depthwise/depthwise_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "192" },
+                  { "size": "64" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_6/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "64" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_6/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "64" },
+                  { "size": "384" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_7/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_7/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_12/depthwise/BatchNorm/FusedBatchNorm/Offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "384" },
+                  { "size": "64" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_7/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "64" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_7/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "64" },
+                  { "size": "384" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_8/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_8/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "384" },
+                  { "size": "64" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_8/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_11/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "64" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_8/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "64" },
+                  { "size": "384" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_9/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_9/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "384" },
+                  { "size": "64" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_9/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_11/depthwise/BatchNorm/FusedBatchNorm/Offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "64" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_9/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "64" },
+                  { "size": "384" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_10/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_10/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "384" },
+                  { "size": "96" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_10/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "96" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_10/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "96" },
+                  { "size": "576" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_11/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_10/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_11/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "576" },
+                  { "size": "96" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_11/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "96" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_11/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "96" },
+                  { "size": "576" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_12/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_10/depthwise/BatchNorm/FusedBatchNorm/Offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_12/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "576" },
+                  { "size": "96" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_12/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "96" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_12/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "96" },
+                  { "size": "576" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_13/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "576" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_13/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_9/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "576" },
+                  { "size": "160" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_13/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "160" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_13/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "160" },
+                  { "size": "960" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_14/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "960" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_14/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_9/depthwise/BatchNorm/FusedBatchNorm/Offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "960" },
+                  { "size": "160" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_14/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "160" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_14/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "160" },
+                  { "size": "960" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_15/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "960" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_15/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "960" },
+                  { "size": "160" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_15/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_8/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "160" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_15/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "160" },
+                  { "size": "960" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_16/expand/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "960" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_16/expand/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "960" },
+                  { "size": "320" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_16/project/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_8/depthwise/BatchNorm/FusedBatchNorm/Offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "320" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_16/project/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "320" },
+                  { "size": "256" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "aspp0/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "256" }] }
+            }
+          }
+        },
+        "name": "aspp0/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "320" },
+                  { "size": "256" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "image_pooling/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "256" }] }
+            }
+          }
+        },
+        "name": "image_pooling/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_7/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": {
+                "dim": [
+                  { "size": "1" },
+                  { "size": "1" },
+                  { "size": "512" },
+                  { "size": "256" }
+                ]
+              }
+            }
+          }
+        },
+        "name": "concat_projection/Conv2D_weights",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "256" }] }
+            }
+          }
+        },
+        "name": "concat_projection/Conv2D_bn_offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "384" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_7/depthwise/BatchNorm/FusedBatchNorm/Offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "960" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_16/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "960" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_16/depthwise/BatchNorm/FusedBatchNorm/Offset",
+        "op": "Const"
+      },
+      {
+        "attr": {
+          "dtype": { "type": "DT_FLOAT" },
+          "value": {
+            "tensor": {
+              "dtype": "DT_FLOAT",
+              "tensorShape": { "dim": [{ "size": "960" }] }
+            }
+          }
+        },
+        "name": "MobilenetV2/expanded_conv_15/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+        "op": "Const"
+      },
+      {
+        "input": ["ImageTensor"],
+        "attr": {
+          "squeeze_dims": { "list": { "i": ["0"] } },
+          "T": { "type": "DT_UINT8" }
+        },
+        "name": "Squeeze",
+        "op": "Squeeze"
+      },
+      {
+        "input": ["ImageTensor"],
+        "attr": {
+          "out_type": { "type": "DT_INT32" },
+          "T": { "type": "DT_UINT8" }
+        },
+        "name": "Shape",
+        "op": "Shape"
+      },
+      {
+        "input": ["Squeeze"],
+        "attr": {
+          "DstT": { "type": "DT_FLOAT" },
+          "SrcT": { "type": "DT_UINT8" },
+          "Truncate": { "b": false }
+        },
+        "name": "Cast",
+        "op": "Cast"
+      },
+      {
+        "input": [
+          "Shape",
+          "strided_slice_4/stack",
+          "strided_slice_7/stack_1",
+          "strided_slice_4/stack"
+        ],
+        "attr": {
+          "new_axis_mask": { "i": "0" },
+          "Index": { "type": "DT_INT32" },
+          "begin_mask": { "i": "0" },
+          "ellipsis_mask": { "i": "0" },
+          "end_mask": { "i": "0" },
+          "T": { "type": "DT_INT32" },
+          "shrink_axis_mask": { "i": "0" }
+        },
+        "name": "strided_slice",
+        "op": "StridedSlice"
+      },
+      {
+        "input": ["Cast", "stack/0"],
+        "attr": { "Tdim": { "type": "DT_INT32" }, "T": { "type": "DT_FLOAT" } },
+        "name": "ExpandDims",
+        "op": "ExpandDims"
+      },
+      {
+        "input": ["Cast"],
+        "attr": {
+          "out_type": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
+        },
+        "name": "Shape_1",
+        "op": "Shape"
+      },
+      {
+        "input": [
+          "strided_slice",
+          "strided_slice_3/stack",
+          "strided_slice_4/stack",
+          "strided_slice_4/stack"
+        ],
+        "attr": {
+          "new_axis_mask": { "i": "0" },
+          "Index": { "type": "DT_INT32" },
+          "begin_mask": { "i": "0" },
+          "ellipsis_mask": { "i": "0" },
+          "end_mask": { "i": "0" },
+          "T": { "type": "DT_INT32" },
+          "shrink_axis_mask": { "i": "1" }
+        },
+        "name": "strided_slice_8",
+        "op": "StridedSlice"
+      },
+      {
+        "input": [
+          "strided_slice",
+          "strided_slice_4/stack",
+          "strided_slice_4/stack_1",
+          "strided_slice_4/stack"
+        ],
+        "attr": {
+          "new_axis_mask": { "i": "0" },
+          "Index": { "type": "DT_INT32" },
+          "begin_mask": { "i": "0" },
+          "ellipsis_mask": { "i": "0" },
+          "end_mask": { "i": "0" },
+          "T": { "type": "DT_INT32" },
+          "shrink_axis_mask": { "i": "1" }
+        },
+        "name": "strided_slice_9",
+        "op": "StridedSlice"
+      },
+      {
+        "input": [
+          "Shape_1",
+          "strided_slice_3/stack",
+          "strided_slice_4/stack",
+          "strided_slice_4/stack"
+        ],
+        "attr": {
+          "new_axis_mask": { "i": "0" },
+          "Index": { "type": "DT_INT32" },
+          "begin_mask": { "i": "0" },
+          "ellipsis_mask": { "i": "0" },
+          "end_mask": { "i": "0" },
+          "T": { "type": "DT_INT32" },
+          "shrink_axis_mask": { "i": "1" }
+        },
+        "name": "strided_slice_1",
+        "op": "StridedSlice"
+      },
+      {
+        "input": [
+          "Shape_1",
+          "strided_slice_4/stack",
+          "strided_slice_4/stack_1",
+          "strided_slice_4/stack"
+        ],
+        "attr": {
+          "new_axis_mask": { "i": "0" },
+          "Index": { "type": "DT_INT32" },
+          "begin_mask": { "i": "0" },
+          "ellipsis_mask": { "i": "0" },
+          "end_mask": { "i": "0" },
+          "T": { "type": "DT_INT32" },
+          "shrink_axis_mask": { "i": "1" }
+        },
+        "name": "strided_slice_2",
+        "op": "StridedSlice"
+      },
+      {
+        "input": [
+          "SemanticPredictions/size/0",
+          "strided_slice_8",
+          "strided_slice_9"
+        ],
+        "attr": {
+          "N": { "i": "3" },
+          "T": { "type": "DT_INT32" },
+          "axis": { "i": "0" }
+        },
+        "name": "SemanticPredictions/size",
+        "op": "Pack"
+      },
+      {
+        "input": ["strided_slice_1", "strided_slice_2"],
+        "attr": {
+          "N": { "i": "2" },
+          "T": { "type": "DT_INT32" },
+          "axis": { "i": "0" }
+        },
+        "name": "ToFloat_1/x",
+        "op": "Pack"
+      },
+      {
+        "input": ["ToFloat_1/x"],
+        "attr": {
+          "DstT": { "type": "DT_FLOAT" },
+          "Truncate": { "b": false },
+          "SrcT": { "type": "DT_INT32" }
+        },
+        "name": "ToFloat_1",
+        "op": "Cast"
+      },
+      {
+        "input": ["ToFloat_1"],
+        "attr": {
+          "DstT": { "type": "DT_INT32" },
+          "Truncate": { "b": false },
+          "SrcT": { "type": "DT_FLOAT" }
+        },
+        "name": "ToInt32",
+        "op": "Cast"
+      },
+      {
+        "input": ["ExpandDims", "ToInt32"],
+        "attr": {
+          "align_corners": { "b": true },
+          "T": { "type": "DT_FLOAT" },
+          "half_pixel_centers": { "b": false }
+        },
+        "name": "ResizeBilinear",
+        "op": "ResizeBilinear"
+      },
+      {
+        "input": ["ResizeBilinear"],
+        "attr": {
+          "squeeze_dims": { "list": { "i": ["0"] } },
+          "T": { "type": "DT_FLOAT" }
+        },
+        "name": "Squeeze_1",
+        "op": "Squeeze"
+      },
+      {
+        "input": ["Squeeze_1"],
+        "attr": {
+          "out_type": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
+        },
+        "name": "Shape_2",
+        "op": "Shape"
+      },
+      {
+        "input": ["Squeeze_1", "Reshape"],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "sub_2",
+        "op": "Sub"
+      },
+      {
+        "input": [
+          "Shape_2",
+          "strided_slice_3/stack",
+          "strided_slice_4/stack",
+          "strided_slice_4/stack"
+        ],
+        "attr": {
+          "new_axis_mask": { "i": "0" },
+          "Index": { "type": "DT_INT32" },
+          "begin_mask": { "i": "0" },
+          "ellipsis_mask": { "i": "0" },
+          "end_mask": { "i": "0" },
+          "T": { "type": "DT_INT32" },
+          "shrink_axis_mask": { "i": "1" }
+        },
+        "name": "strided_slice_3",
+        "op": "StridedSlice"
+      },
+      {
+        "input": [
+          "Shape_2",
+          "strided_slice_4/stack",
+          "strided_slice_4/stack_1",
+          "strided_slice_4/stack"
+        ],
+        "attr": {
+          "new_axis_mask": { "i": "0" },
+          "Index": { "type": "DT_INT32" },
+          "begin_mask": { "i": "0" },
+          "ellipsis_mask": { "i": "0" },
+          "end_mask": { "i": "0" },
+          "T": { "type": "DT_INT32" },
+          "shrink_axis_mask": { "i": "1" }
+        },
+        "name": "strided_slice_4",
+        "op": "StridedSlice"
+      },
+      {
+        "input": ["sub_2"],
+        "attr": {
+          "out_type": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
+        },
+        "name": "Shape_3",
+        "op": "Shape"
+      },
+      {
+        "input": ["sub_1/x", "strided_slice_3"],
+        "attr": { "T": { "type": "DT_INT32" } },
+        "name": "sub",
+        "op": "Sub"
+      },
+      {
+        "input": ["sub_1/x", "strided_slice_4"],
+        "attr": { "T": { "type": "DT_INT32" } },
+        "name": "sub_1",
+        "op": "Sub"
+      },
+      {
+        "input": [
+          "Shape_3",
+          "strided_slice_3/stack",
+          "strided_slice_4/stack",
+          "strided_slice_4/stack"
+        ],
+        "attr": {
+          "new_axis_mask": { "i": "0" },
+          "Index": { "type": "DT_INT32" },
+          "begin_mask": { "i": "0" },
+          "ellipsis_mask": { "i": "0" },
+          "end_mask": { "i": "0" },
+          "T": { "type": "DT_INT32" },
+          "shrink_axis_mask": { "i": "1" }
+        },
+        "name": "strided_slice_5",
+        "op": "StridedSlice"
+      },
+      {
+        "input": [
+          "Shape_3",
+          "strided_slice_4/stack",
+          "strided_slice_4/stack_1",
+          "strided_slice_4/stack"
+        ],
+        "attr": {
+          "new_axis_mask": { "i": "0" },
+          "Index": { "type": "DT_INT32" },
+          "begin_mask": { "i": "0" },
+          "ellipsis_mask": { "i": "0" },
+          "end_mask": { "i": "0" },
+          "T": { "type": "DT_INT32" },
+          "shrink_axis_mask": { "i": "1" }
+        },
+        "name": "strided_slice_6",
+        "op": "StridedSlice"
+      },
+      {
+        "input": ["sub", "stack/0"],
+        "attr": { "T": { "type": "DT_INT32" } },
+        "name": "Maximum",
+        "op": "Maximum"
+      },
+      {
+        "input": ["sub_1", "stack/0"],
+        "attr": { "T": { "type": "DT_INT32" } },
+        "name": "Maximum_1",
+        "op": "Maximum"
+      },
+      {
+        "input": ["Maximum", "strided_slice_3"],
+        "attr": { "T": { "type": "DT_INT32" } },
+        "name": "add",
+        "op": "Add"
+      },
+      {
+        "input": ["Maximum_1", "strided_slice_4"],
+        "attr": { "T": { "type": "DT_INT32" } },
+        "name": "add_1",
+        "op": "Add"
+      },
+      {
+        "input": ["add", "strided_slice_5"],
+        "attr": { "T": { "type": "DT_INT32" } },
+        "name": "sub_6",
+        "op": "Sub"
+      },
+      {
+        "input": ["add_1", "strided_slice_6"],
+        "attr": { "T": { "type": "DT_INT32" } },
+        "name": "sub_4",
+        "op": "Sub"
+      },
+      {
+        "input": ["stack/0", "sub_6"],
+        "attr": {
+          "N": { "i": "2" },
+          "T": { "type": "DT_INT32" },
+          "axis": { "i": "0" }
+        },
+        "name": "stack",
+        "op": "Pack"
+      },
+      {
+        "input": ["stack/0", "sub_4"],
+        "attr": {
+          "N": { "i": "2" },
+          "T": { "type": "DT_INT32" },
+          "axis": { "i": "0" }
+        },
+        "name": "stack_1",
+        "op": "Pack"
+      },
+      {
+        "input": ["stack", "stack_1", "stack_2"],
+        "attr": {
+          "N": { "i": "3" },
+          "T": { "type": "DT_INT32" },
+          "axis": { "i": "0" }
+        },
+        "name": "stack_3",
+        "op": "Pack"
+      },
+      {
+        "input": ["sub_2", "stack_3"],
+        "attr": {
+          "Tpaddings": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
+        },
+        "name": "Pad",
+        "op": "Pad"
+      },
+      {
+        "input": ["Pad", "Reshape"],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "add_2",
+        "op": "Add"
+      },
+      {
+        "input": ["add_2", "stack/0"],
+        "attr": { "Tdim": { "type": "DT_INT32" }, "T": { "type": "DT_FLOAT" } },
+        "name": "ExpandDims_1",
+        "op": "ExpandDims"
+      },
+      {
+        "input": ["ExpandDims_1", "mul_1/x"],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "mul_1",
+        "op": "Mul"
+      },
+      {
+        "input": ["mul_1", "ToFloat/x"],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "sub_7",
+        "op": "Sub"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "sub_7",
+          "MobilenetV2/Conv/Conv2D_weights",
+          "MobilenetV2/Conv/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/Conv/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/Conv/Relu6",
+          "MobilenetV2/expanded_conv/depthwise/depthwise_weights",
+          "MobilenetV2/expanded_conv/depthwise/depthwise_bn_offset"
+        ],
+        "attr": {
+          "data_format": { "s": "TkhXQw==" },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv/depthwise/depthwise",
+        "op": "FusedDepthwiseConv2dNative"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv/depthwise/depthwise",
+          "MobilenetV2/expanded_conv/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv/project/BatchNorm/FusedBatchNorm",
+          "MobilenetV2/expanded_conv_1/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_1/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_1/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_1/expand/Relu6",
+          "MobilenetV2/expanded_conv_1/depthwise/depthwise_weights",
+          "MobilenetV2/expanded_conv_1/depthwise/depthwise_bn_offset"
+        ],
+        "attr": {
+          "data_format": { "s": "TkhXQw==" },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_1/depthwise/depthwise",
+        "op": "FusedDepthwiseConv2dNative"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_1/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_1/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_1/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm",
+          "MobilenetV2/expanded_conv_2/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_2/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_2/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_2/expand/Relu6",
+          "MobilenetV2/expanded_conv_2/depthwise/depthwise_weights",
+          "MobilenetV2/expanded_conv_2/depthwise/depthwise_bn_offset"
+        ],
+        "attr": {
+          "data_format": { "s": "TkhXQw==" },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_2/depthwise/depthwise",
+        "op": "FusedDepthwiseConv2dNative"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_2/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_2/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_2/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_2/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_1/project/BatchNorm/FusedBatchNorm",
+          "MobilenetV2/expanded_conv_2/project/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_2/add",
+        "op": "Add"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_2/add",
+          "MobilenetV2/expanded_conv_3/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_3/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_3/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_3/expand/Relu6",
+          "MobilenetV2/expanded_conv_3/depthwise/depthwise_weights",
+          "MobilenetV2/expanded_conv_3/depthwise/depthwise_bn_offset"
+        ],
+        "attr": {
+          "data_format": { "s": "TkhXQw==" },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "2", "2", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_3/depthwise/depthwise",
+        "op": "FusedDepthwiseConv2dNative"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_3/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_3/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_3/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm",
+          "MobilenetV2/expanded_conv_4/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_4/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_4/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_4/expand/Relu6",
+          "MobilenetV2/expanded_conv_4/depthwise/depthwise_weights",
+          "MobilenetV2/expanded_conv_4/depthwise/depthwise_bn_offset"
+        ],
+        "attr": {
+          "data_format": { "s": "TkhXQw==" },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_4/depthwise/depthwise",
+        "op": "FusedDepthwiseConv2dNative"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_4/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_4/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_4/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_4/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_3/project/BatchNorm/FusedBatchNorm",
+          "MobilenetV2/expanded_conv_4/project/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_4/add",
+        "op": "Add"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_4/add",
+          "MobilenetV2/expanded_conv_5/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_5/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_5/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_5/expand/Relu6",
+          "MobilenetV2/expanded_conv_5/depthwise/depthwise_weights",
+          "MobilenetV2/expanded_conv_5/depthwise/depthwise_bn_offset"
+        ],
+        "attr": {
+          "data_format": { "s": "TkhXQw==" },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_5/depthwise/depthwise",
+        "op": "FusedDepthwiseConv2dNative"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_5/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_5/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_5/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_5/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_4/add",
+          "MobilenetV2/expanded_conv_5/project/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_5/add",
+        "op": "Add"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_5/add",
+          "MobilenetV2/expanded_conv_6/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_6/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_6/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_6/expand/Relu6",
+          "MobilenetV2/expanded_conv_6/depthwise/depthwise_weights",
+          "MobilenetV2/expanded_conv_6/depthwise/depthwise_bn_offset"
+        ],
+        "attr": {
+          "data_format": { "s": "TkhXQw==" },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_6/depthwise/depthwise",
+        "op": "FusedDepthwiseConv2dNative"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_6/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_6/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_6/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm",
+          "MobilenetV2/expanded_conv_7/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_7/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_7/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_7/expand/Relu6",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/paddings"
+        ],
+        "attr": {
+          "Tpaddings": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tblock_shape": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND",
+        "op": "SpaceToBatchND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise_weights"
+        ],
+        "attr": {
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "padding": { "s": "VkFMSUQ=" },
+          "T": { "type": "DT_FLOAT" },
+          "data_format": { "s": "TkhXQw==" }
+        },
+        "name": "MobilenetV2/expanded_conv_7/depthwise/depthwise",
+        "op": "DepthwiseConv2dNative"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/BatchToSpaceND/crops"
+        ],
+        "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "Tblock_shape": { "type": "DT_INT32" },
+          "Tcrops": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_7/depthwise/depthwise/BatchToSpaceND",
+        "op": "BatchToSpaceND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_7/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/BatchToSpaceND"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_7/depthwise/BatchNorm/FusedBatchNorm/Mul",
+        "op": "Mul"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_7/depthwise/BatchNorm/FusedBatchNorm/Mul",
+          "MobilenetV2/expanded_conv_7/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_7/depthwise/BatchNorm/FusedBatchNorm",
+        "op": "Add"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_7/depthwise/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_7/depthwise/Relu6",
+        "op": "Relu6"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_7/depthwise/Relu6",
+          "MobilenetV2/expanded_conv_7/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_7/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_7/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_6/project/BatchNorm/FusedBatchNorm",
+          "MobilenetV2/expanded_conv_7/project/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_7/add",
+        "op": "Add"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_7/add",
+          "MobilenetV2/expanded_conv_8/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_8/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_8/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_8/expand/Relu6",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/paddings"
+        ],
+        "attr": {
+          "Tpaddings": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tblock_shape": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_8/depthwise/depthwise/SpaceToBatchND",
+        "op": "SpaceToBatchND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_8/depthwise/depthwise/SpaceToBatchND",
+          "MobilenetV2/expanded_conv_8/depthwise/depthwise_weights"
+        ],
+        "attr": {
+          "padding": { "s": "VkFMSUQ=" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "T": { "type": "DT_FLOAT" },
+          "data_format": { "s": "TkhXQw==" }
+        },
+        "name": "MobilenetV2/expanded_conv_8/depthwise/depthwise",
+        "op": "DepthwiseConv2dNative"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_8/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/BatchToSpaceND/crops"
+        ],
+        "attr": {
+          "Tblock_shape": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tcrops": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_8/depthwise/depthwise/BatchToSpaceND",
+        "op": "BatchToSpaceND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_8/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+          "MobilenetV2/expanded_conv_8/depthwise/depthwise/BatchToSpaceND"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_8/depthwise/BatchNorm/FusedBatchNorm/Mul",
+        "op": "Mul"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_8/depthwise/BatchNorm/FusedBatchNorm/Mul",
+          "MobilenetV2/expanded_conv_8/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_8/depthwise/BatchNorm/FusedBatchNorm",
+        "op": "Add"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_8/depthwise/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_8/depthwise/Relu6",
+        "op": "Relu6"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_8/depthwise/Relu6",
+          "MobilenetV2/expanded_conv_8/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_8/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_8/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_7/add",
+          "MobilenetV2/expanded_conv_8/project/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_8/add",
+        "op": "Add"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_8/add",
+          "MobilenetV2/expanded_conv_9/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_9/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_9/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_9/expand/Relu6",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/paddings"
+        ],
+        "attr": {
+          "Tpaddings": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tblock_shape": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_9/depthwise/depthwise/SpaceToBatchND",
+        "op": "SpaceToBatchND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_9/depthwise/depthwise/SpaceToBatchND",
+          "MobilenetV2/expanded_conv_9/depthwise/depthwise_weights"
+        ],
+        "attr": {
+          "padding": { "s": "VkFMSUQ=" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "data_format": { "s": "TkhXQw==" },
+          "T": { "type": "DT_FLOAT" }
+        },
+        "name": "MobilenetV2/expanded_conv_9/depthwise/depthwise",
+        "op": "DepthwiseConv2dNative"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_9/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/BatchToSpaceND/crops"
+        ],
+        "attr": {
+          "Tcrops": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tblock_shape": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_9/depthwise/depthwise/BatchToSpaceND",
+        "op": "BatchToSpaceND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_9/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+          "MobilenetV2/expanded_conv_9/depthwise/depthwise/BatchToSpaceND"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_9/depthwise/BatchNorm/FusedBatchNorm/Mul",
+        "op": "Mul"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_9/depthwise/BatchNorm/FusedBatchNorm/Mul",
+          "MobilenetV2/expanded_conv_9/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_9/depthwise/BatchNorm/FusedBatchNorm",
+        "op": "Add"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_9/depthwise/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_9/depthwise/Relu6",
+        "op": "Relu6"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_9/depthwise/Relu6",
+          "MobilenetV2/expanded_conv_9/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_9/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_9/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_8/add",
+          "MobilenetV2/expanded_conv_9/project/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_9/add",
+        "op": "Add"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_9/add",
+          "MobilenetV2/expanded_conv_10/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_10/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_10/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_10/expand/Relu6",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/paddings"
+        ],
+        "attr": {
+          "Tpaddings": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tblock_shape": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_10/depthwise/depthwise/SpaceToBatchND",
+        "op": "SpaceToBatchND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_10/depthwise/depthwise/SpaceToBatchND",
+          "MobilenetV2/expanded_conv_10/depthwise/depthwise_weights"
+        ],
+        "attr": {
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "padding": { "s": "VkFMSUQ=" },
+          "T": { "type": "DT_FLOAT" },
+          "data_format": { "s": "TkhXQw==" }
+        },
+        "name": "MobilenetV2/expanded_conv_10/depthwise/depthwise",
+        "op": "DepthwiseConv2dNative"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_10/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/BatchToSpaceND/crops"
+        ],
+        "attr": {
+          "Tblock_shape": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tcrops": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_10/depthwise/depthwise/BatchToSpaceND",
+        "op": "BatchToSpaceND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_10/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+          "MobilenetV2/expanded_conv_10/depthwise/depthwise/BatchToSpaceND"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_10/depthwise/BatchNorm/FusedBatchNorm/Mul",
+        "op": "Mul"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_10/depthwise/BatchNorm/FusedBatchNorm/Mul",
+          "MobilenetV2/expanded_conv_10/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_10/depthwise/BatchNorm/FusedBatchNorm",
+        "op": "Add"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_10/depthwise/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_10/depthwise/Relu6",
+        "op": "Relu6"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_10/depthwise/Relu6",
+          "MobilenetV2/expanded_conv_10/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_10/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm",
+          "MobilenetV2/expanded_conv_11/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_11/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_11/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_11/expand/Relu6",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/paddings"
+        ],
+        "attr": {
+          "Tpaddings": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tblock_shape": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_11/depthwise/depthwise/SpaceToBatchND",
+        "op": "SpaceToBatchND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_11/depthwise/depthwise/SpaceToBatchND",
+          "MobilenetV2/expanded_conv_11/depthwise/depthwise_weights"
+        ],
+        "attr": {
+          "padding": { "s": "VkFMSUQ=" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "data_format": { "s": "TkhXQw==" },
+          "T": { "type": "DT_FLOAT" }
+        },
+        "name": "MobilenetV2/expanded_conv_11/depthwise/depthwise",
+        "op": "DepthwiseConv2dNative"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_11/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/BatchToSpaceND/crops"
+        ],
+        "attr": {
+          "Tblock_shape": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tcrops": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_11/depthwise/depthwise/BatchToSpaceND",
+        "op": "BatchToSpaceND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_11/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+          "MobilenetV2/expanded_conv_11/depthwise/depthwise/BatchToSpaceND"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_11/depthwise/BatchNorm/FusedBatchNorm/Mul",
+        "op": "Mul"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_11/depthwise/BatchNorm/FusedBatchNorm/Mul",
+          "MobilenetV2/expanded_conv_11/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_11/depthwise/BatchNorm/FusedBatchNorm",
+        "op": "Add"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_11/depthwise/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_11/depthwise/Relu6",
+        "op": "Relu6"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_11/depthwise/Relu6",
+          "MobilenetV2/expanded_conv_11/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_11/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_11/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_10/project/BatchNorm/FusedBatchNorm",
+          "MobilenetV2/expanded_conv_11/project/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_11/add",
+        "op": "Add"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_11/add",
+          "MobilenetV2/expanded_conv_12/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_12/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_12/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_12/expand/Relu6",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/paddings"
+        ],
+        "attr": {
+          "Tpaddings": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tblock_shape": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_12/depthwise/depthwise/SpaceToBatchND",
+        "op": "SpaceToBatchND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_12/depthwise/depthwise/SpaceToBatchND",
+          "MobilenetV2/expanded_conv_12/depthwise/depthwise_weights"
+        ],
+        "attr": {
+          "padding": { "s": "VkFMSUQ=" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "T": { "type": "DT_FLOAT" },
+          "data_format": { "s": "TkhXQw==" }
+        },
+        "name": "MobilenetV2/expanded_conv_12/depthwise/depthwise",
+        "op": "DepthwiseConv2dNative"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_12/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/BatchToSpaceND/crops"
+        ],
+        "attr": {
+          "Tcrops": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tblock_shape": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_12/depthwise/depthwise/BatchToSpaceND",
+        "op": "BatchToSpaceND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_12/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+          "MobilenetV2/expanded_conv_12/depthwise/depthwise/BatchToSpaceND"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_12/depthwise/BatchNorm/FusedBatchNorm/Mul",
+        "op": "Mul"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_12/depthwise/BatchNorm/FusedBatchNorm/Mul",
+          "MobilenetV2/expanded_conv_12/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_12/depthwise/BatchNorm/FusedBatchNorm",
+        "op": "Add"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_12/depthwise/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_12/depthwise/Relu6",
+        "op": "Relu6"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_12/depthwise/Relu6",
+          "MobilenetV2/expanded_conv_12/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_12/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_12/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_11/add",
+          "MobilenetV2/expanded_conv_12/project/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_12/add",
+        "op": "Add"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_12/add",
+          "MobilenetV2/expanded_conv_13/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_13/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_13/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_13/expand/Relu6",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/paddings"
+        ],
+        "attr": {
+          "Tpaddings": { "type": "DT_INT32" },
+          "Tblock_shape": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
+        },
+        "name": "MobilenetV2/expanded_conv_13/depthwise/depthwise/SpaceToBatchND",
+        "op": "SpaceToBatchND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_13/depthwise/depthwise/SpaceToBatchND",
+          "MobilenetV2/expanded_conv_13/depthwise/depthwise_weights"
+        ],
+        "attr": {
+          "padding": { "s": "VkFMSUQ=" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "T": { "type": "DT_FLOAT" },
+          "data_format": { "s": "TkhXQw==" }
+        },
+        "name": "MobilenetV2/expanded_conv_13/depthwise/depthwise",
+        "op": "DepthwiseConv2dNative"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_13/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_7/depthwise/depthwise/BatchToSpaceND/crops"
+        ],
+        "attr": {
+          "T": { "type": "DT_FLOAT" },
+          "Tblock_shape": { "type": "DT_INT32" },
+          "Tcrops": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_13/depthwise/depthwise/BatchToSpaceND",
+        "op": "BatchToSpaceND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_13/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+          "MobilenetV2/expanded_conv_13/depthwise/depthwise/BatchToSpaceND"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_13/depthwise/BatchNorm/FusedBatchNorm/Mul",
+        "op": "Mul"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_13/depthwise/BatchNorm/FusedBatchNorm/Mul",
+          "MobilenetV2/expanded_conv_13/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_13/depthwise/BatchNorm/FusedBatchNorm",
+        "op": "Add"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_13/depthwise/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_13/depthwise/Relu6",
+        "op": "Relu6"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_13/depthwise/Relu6",
+          "MobilenetV2/expanded_conv_13/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_13/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm",
+          "MobilenetV2/expanded_conv_14/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_14/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_14/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_14/expand/Relu6",
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND/paddings"
+        ],
+        "attr": {
+          "Tpaddings": { "type": "DT_INT32" },
+          "Tblock_shape": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
+        },
+        "name": "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND",
+        "op": "SpaceToBatchND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND",
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise_weights"
+        ],
+        "attr": {
+          "padding": { "s": "VkFMSUQ=" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "data_format": { "s": "TkhXQw==" },
+          "T": { "type": "DT_FLOAT" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } }
+        },
+        "name": "MobilenetV2/expanded_conv_14/depthwise/depthwise",
+        "op": "DepthwiseConv2dNative"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise/BatchToSpaceND/crops"
+        ],
+        "attr": {
+          "Tcrops": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tblock_shape": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_14/depthwise/depthwise/BatchToSpaceND",
+        "op": "BatchToSpaceND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_14/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise/BatchToSpaceND"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_14/depthwise/BatchNorm/FusedBatchNorm/Mul",
+        "op": "Mul"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_14/depthwise/BatchNorm/FusedBatchNorm/Mul",
+          "MobilenetV2/expanded_conv_14/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_14/depthwise/BatchNorm/FusedBatchNorm",
+        "op": "Add"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_14/depthwise/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_14/depthwise/Relu6",
+        "op": "Relu6"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_14/depthwise/Relu6",
+          "MobilenetV2/expanded_conv_14/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_14/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_14/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_13/project/BatchNorm/FusedBatchNorm",
+          "MobilenetV2/expanded_conv_14/project/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_14/add",
+        "op": "Add"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_14/add",
+          "MobilenetV2/expanded_conv_15/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_15/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_15/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_15/expand/Relu6",
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND/paddings"
+        ],
+        "attr": {
+          "Tpaddings": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tblock_shape": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_15/depthwise/depthwise/SpaceToBatchND",
+        "op": "SpaceToBatchND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_15/depthwise/depthwise/SpaceToBatchND",
+          "MobilenetV2/expanded_conv_15/depthwise/depthwise_weights"
+        ],
+        "attr": {
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "padding": { "s": "VkFMSUQ=" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "T": { "type": "DT_FLOAT" },
+          "data_format": { "s": "TkhXQw==" }
+        },
+        "name": "MobilenetV2/expanded_conv_15/depthwise/depthwise",
+        "op": "DepthwiseConv2dNative"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_15/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise/BatchToSpaceND/crops"
+        ],
+        "attr": {
+          "Tblock_shape": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tcrops": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_15/depthwise/depthwise/BatchToSpaceND",
+        "op": "BatchToSpaceND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_15/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+          "MobilenetV2/expanded_conv_15/depthwise/depthwise/BatchToSpaceND"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_15/depthwise/BatchNorm/FusedBatchNorm/Mul",
+        "op": "Mul"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_15/depthwise/BatchNorm/FusedBatchNorm/Mul",
+          "MobilenetV2/expanded_conv_15/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_15/depthwise/BatchNorm/FusedBatchNorm",
+        "op": "Add"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_15/depthwise/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_15/depthwise/Relu6",
+        "op": "Relu6"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_15/depthwise/Relu6",
+          "MobilenetV2/expanded_conv_15/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_15/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_15/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_14/add",
+          "MobilenetV2/expanded_conv_15/project/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_15/add",
+        "op": "Add"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_15/add",
+          "MobilenetV2/expanded_conv_16/expand/Conv2D_weights",
+          "MobilenetV2/expanded_conv_16/expand/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdTY="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_16/expand/Relu6",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_16/expand/Relu6",
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND/paddings"
+        ],
+        "attr": {
+          "Tpaddings": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tblock_shape": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_16/depthwise/depthwise/SpaceToBatchND",
+        "op": "SpaceToBatchND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_16/depthwise/depthwise/SpaceToBatchND",
+          "MobilenetV2/expanded_conv_16/depthwise/depthwise_weights"
+        ],
+        "attr": {
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "padding": { "s": "VkFMSUQ=" },
+          "data_format": { "s": "TkhXQw==" },
+          "T": { "type": "DT_FLOAT" }
+        },
+        "name": "MobilenetV2/expanded_conv_16/depthwise/depthwise",
+        "op": "DepthwiseConv2dNative"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_16/depthwise/depthwise",
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND/block_shape",
+          "MobilenetV2/expanded_conv_14/depthwise/depthwise/BatchToSpaceND/crops"
+        ],
+        "attr": {
+          "Tblock_shape": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "Tcrops": { "type": "DT_INT32" }
+        },
+        "name": "MobilenetV2/expanded_conv_16/depthwise/depthwise/BatchToSpaceND",
+        "op": "BatchToSpaceND"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_16/depthwise/BatchNorm/FusedBatchNorm/Scaled",
+          "MobilenetV2/expanded_conv_16/depthwise/depthwise/BatchToSpaceND"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_16/depthwise/BatchNorm/FusedBatchNorm/Mul",
+        "op": "Mul"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_16/depthwise/BatchNorm/FusedBatchNorm/Mul",
+          "MobilenetV2/expanded_conv_16/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_16/depthwise/BatchNorm/FusedBatchNorm",
+        "op": "Add"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_16/depthwise/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": { "T": { "type": "DT_FLOAT" } },
+        "name": "MobilenetV2/expanded_conv_16/depthwise/Relu6",
+        "op": "Relu6"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_16/depthwise/Relu6",
+          "MobilenetV2/expanded_conv_16/project/Conv2D_weights",
+          "MobilenetV2/expanded_conv_16/project/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": [
+          "MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm"
+        ],
+        "attr": {
+          "padding": { "s": "VkFMSUQ=" },
+          "strides": { "list": { "i": ["1", "65", "65", "1"] } },
+          "data_format": { "s": "TkhXQw==" },
+          "ksize": { "list": { "i": ["1", "65", "65", "1"] } },
+          "T": { "type": "DT_FLOAT" }
+        },
+        "name": "AvgPool2D/AvgPool",
+        "op": "AvgPool"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "MobilenetV2/expanded_conv_16/project/BatchNorm/FusedBatchNorm",
+          "aspp0/Conv2D_weights",
+          "aspp0/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdQ=="] } }
+        },
+        "name": "aspp0/Relu",
+        "op": "_FusedConv2D"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "AvgPool2D/AvgPool",
+          "image_pooling/Conv2D_weights",
+          "image_pooling/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdQ=="] } }
+        },
+        "name": "image_pooling/Relu",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": ["image_pooling/Relu", "ResizeBilinear_1/size"],
+        "attr": {
+          "align_corners": { "b": true },
+          "T": { "type": "DT_FLOAT" },
+          "half_pixel_centers": { "b": false }
+        },
+        "name": "ResizeBilinear_1",
+        "op": "ResizeBilinear"
+      },
+      {
+        "input": ["ResizeBilinear_1", "aspp0/Relu", "Rank"],
+        "attr": {
+          "Tidx": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" },
+          "N": { "i": "2" }
+        },
+        "name": "concat",
+        "op": "ConcatV2"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "concat",
+          "concat_projection/Conv2D_weights",
+          "concat_projection/Conv2D_bn_offset"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA==", "UmVsdQ=="] } }
+        },
+        "name": "concat_projection/Relu",
+        "op": "_FusedConv2D"
+      },
+      {
+        "device": "/device:CPU:0",
+        "input": [
+          "concat_projection/Relu",
+          "logits/semantic/weights",
+          "logits/semantic/biases"
+        ],
+        "attr": {
+          "explicit_paddings": { "list": {} },
+          "epsilon": { "f": 0.0 },
+          "data_format": { "s": "TkhXQw==" },
+          "use_cudnn_on_gpu": { "b": true },
+          "padding": { "s": "U0FNRQ==" },
+          "strides": { "list": { "i": ["1", "1", "1", "1"] } },
+          "num_args": { "i": "1" },
+          "T": { "type": "DT_FLOAT" },
+          "dilations": { "list": { "i": ["1", "1", "1", "1"] } },
+          "fused_ops": { "list": { "s": ["Qmlhc0FkZA=="] } }
+        },
+        "name": "logits/semantic/BiasAdd",
+        "op": "_FusedConv2D"
+      },
+      {
+        "input": ["logits/semantic/BiasAdd", "ResizeBilinear_1/size"],
+        "attr": {
+          "align_corners": { "b": true },
+          "T": { "type": "DT_FLOAT" },
+          "half_pixel_centers": { "b": false }
+        },
+        "name": "ResizeBilinear_2",
+        "op": "ResizeBilinear"
+      },
+      {
+        "input": ["ResizeBilinear_2", "strided_slice_7"],
+        "attr": {
+          "align_corners": { "b": true },
+          "T": { "type": "DT_FLOAT" },
+          "half_pixel_centers": { "b": false }
+        },
+        "name": "ResizeBilinear_3",
+        "op": "ResizeBilinear"
+      },
+      {
+        "input": ["ResizeBilinear_3", "Rank"],
+        "attr": {
+          "output_type": { "type": "DT_INT64" },
+          "Tidx": { "type": "DT_INT32" },
+          "T": { "type": "DT_FLOAT" }
+        },
+        "name": "ArgMax",
+        "op": "ArgMax"
+      },
+      {
+        "input": [
+          "ArgMax",
+          "SemanticPredictions/begin",
+          "SemanticPredictions/size"
+        ],
+        "attr": {
+          "Index": { "type": "DT_INT32" },
+          "T": { "type": "DT_INT64" }
+        },
+        "name": "SemanticPredictions",
+        "op": "Slice"
+      }
+    ],
+    "library": {},
+    "versions": {}
+  },
+  "generatedBy": "2.1.0",
+  "weightsManifest": [
+    {
+      "paths": [
+        "group1-shard1of3.bin",
+        "group1-shard2of3.bin",
+        "group1-shard3of3.bin"
+      ],
+      "weights": [
+        { "dtype": "int32", "shape": [], "name": "sub_1/x" },
+        { "dtype": "int32", "shape": [2], "name": "stack_2" },
+        { "dtype": "float32", "shape": [1, 1, 3], "name": "Reshape" },
+        { "dtype": "int32", "shape": [], "name": "stack/0" },
+        { "dtype": "float32", "shape": [], "name": "mul_1/x" },
+        { "dtype": "float32", "shape": [], "name": "ToFloat/x" },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 384, 1],
+          "name": "MobilenetV2/expanded_conv_7/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 384, 1],
+          "name": "MobilenetV2/expanded_conv_8/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 384, 1],
+          "name": "MobilenetV2/expanded_conv_9/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 384, 1],
+          "name": "MobilenetV2/expanded_conv_10/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 576, 1],
+          "name": "MobilenetV2/expanded_conv_11/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 576, 1],
+          "name": "MobilenetV2/expanded_conv_12/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "int32",
+          "shape": [2, 2],
+          "name": "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/paddings"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 576, 1],
+          "name": "MobilenetV2/expanded_conv_13/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "int32",
+          "shape": [2],
+          "name": "MobilenetV2/expanded_conv_7/depthwise/depthwise/SpaceToBatchND/block_shape"
+        },
+        {
+          "dtype": "int32",
+          "shape": [2, 2],
+          "name": "MobilenetV2/expanded_conv_7/depthwise/depthwise/BatchToSpaceND/crops"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 960, 1],
+          "name": "MobilenetV2/expanded_conv_14/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 960, 1],
+          "name": "MobilenetV2/expanded_conv_15/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "int32",
+          "shape": [2, 2],
+          "name": "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND/paddings"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 960, 1],
+          "name": "MobilenetV2/expanded_conv_16/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "int32",
+          "shape": [2],
+          "name": "MobilenetV2/expanded_conv_14/depthwise/depthwise/SpaceToBatchND/block_shape"
+        },
+        {
+          "dtype": "int32",
+          "shape": [2, 2],
+          "name": "MobilenetV2/expanded_conv_14/depthwise/depthwise/BatchToSpaceND/crops"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 256, 21],
+          "name": "logits/semantic/weights"
+        },
+        { "dtype": "float32", "shape": [21], "name": "logits/semantic/biases" },
+        { "dtype": "int32", "shape": [2], "name": "ResizeBilinear_1/size" },
+        { "dtype": "int32", "shape": [2], "name": "strided_slice_7" },
+        { "dtype": "int32", "shape": [], "name": "Rank" },
+        { "dtype": "int32", "shape": [3], "name": "SemanticPredictions/begin" },
+        { "dtype": "int32", "shape": [], "name": "SemanticPredictions/size/0" },
+        { "dtype": "int32", "shape": [1], "name": "strided_slice_3/stack" },
+        { "dtype": "int32", "shape": [1], "name": "strided_slice_7/stack_1" },
+        { "dtype": "int32", "shape": [1], "name": "strided_slice_4/stack_1" },
+        { "dtype": "int32", "shape": [1], "name": "strided_slice_4/stack" },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 3, 32],
+          "name": "MobilenetV2/Conv/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [32],
+          "name": "MobilenetV2/Conv/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [960],
+          "name": "MobilenetV2/expanded_conv_15/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 32, 1],
+          "name": "MobilenetV2/expanded_conv/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [32],
+          "name": "MobilenetV2/expanded_conv/depthwise/depthwise_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 32, 16],
+          "name": "MobilenetV2/expanded_conv/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [16],
+          "name": "MobilenetV2/expanded_conv/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 16, 96],
+          "name": "MobilenetV2/expanded_conv_1/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [96],
+          "name": "MobilenetV2/expanded_conv_1/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 96, 1],
+          "name": "MobilenetV2/expanded_conv_1/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [96],
+          "name": "MobilenetV2/expanded_conv_1/depthwise/depthwise_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 96, 24],
+          "name": "MobilenetV2/expanded_conv_1/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [960],
+          "name": "MobilenetV2/expanded_conv_14/depthwise/BatchNorm/FusedBatchNorm/Scaled"
+        },
+        {
+          "dtype": "float32",
+          "shape": [24],
+          "name": "MobilenetV2/expanded_conv_1/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 24, 144],
+          "name": "MobilenetV2/expanded_conv_2/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [144],
+          "name": "MobilenetV2/expanded_conv_2/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 144, 1],
+          "name": "MobilenetV2/expanded_conv_2/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [144],
+          "name": "MobilenetV2/expanded_conv_2/depthwise/depthwise_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 144, 24],
+          "name": "MobilenetV2/expanded_conv_2/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [960],
+          "name": "MobilenetV2/expanded_conv_14/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [24],
+          "name": "MobilenetV2/expanded_conv_2/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 24, 144],
+          "name": "MobilenetV2/expanded_conv_3/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [144],
+          "name": "MobilenetV2/expanded_conv_3/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 144, 1],
+          "name": "MobilenetV2/expanded_conv_3/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [144],
+          "name": "MobilenetV2/expanded_conv_3/depthwise/depthwise_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 144, 32],
+          "name": "MobilenetV2/expanded_conv_3/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [32],
+          "name": "MobilenetV2/expanded_conv_3/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 32, 192],
+          "name": "MobilenetV2/expanded_conv_4/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [576],
+          "name": "MobilenetV2/expanded_conv_13/depthwise/BatchNorm/FusedBatchNorm/Scaled"
+        },
+        {
+          "dtype": "float32",
+          "shape": [192],
+          "name": "MobilenetV2/expanded_conv_4/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 192, 1],
+          "name": "MobilenetV2/expanded_conv_4/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [192],
+          "name": "MobilenetV2/expanded_conv_4/depthwise/depthwise_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 192, 32],
+          "name": "MobilenetV2/expanded_conv_4/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [32],
+          "name": "MobilenetV2/expanded_conv_4/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 32, 192],
+          "name": "MobilenetV2/expanded_conv_5/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [576],
+          "name": "MobilenetV2/expanded_conv_13/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [192],
+          "name": "MobilenetV2/expanded_conv_5/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 192, 1],
+          "name": "MobilenetV2/expanded_conv_5/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [192],
+          "name": "MobilenetV2/expanded_conv_5/depthwise/depthwise_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 192, 32],
+          "name": "MobilenetV2/expanded_conv_5/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [32],
+          "name": "MobilenetV2/expanded_conv_5/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 32, 192],
+          "name": "MobilenetV2/expanded_conv_6/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [192],
+          "name": "MobilenetV2/expanded_conv_6/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [576],
+          "name": "MobilenetV2/expanded_conv_12/depthwise/BatchNorm/FusedBatchNorm/Scaled"
+        },
+        {
+          "dtype": "float32",
+          "shape": [3, 3, 192, 1],
+          "name": "MobilenetV2/expanded_conv_6/depthwise/depthwise_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [192],
+          "name": "MobilenetV2/expanded_conv_6/depthwise/depthwise_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 192, 64],
+          "name": "MobilenetV2/expanded_conv_6/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [64],
+          "name": "MobilenetV2/expanded_conv_6/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 64, 384],
+          "name": "MobilenetV2/expanded_conv_7/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [384],
+          "name": "MobilenetV2/expanded_conv_7/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [576],
+          "name": "MobilenetV2/expanded_conv_12/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 384, 64],
+          "name": "MobilenetV2/expanded_conv_7/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [64],
+          "name": "MobilenetV2/expanded_conv_7/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 64, 384],
+          "name": "MobilenetV2/expanded_conv_8/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [384],
+          "name": "MobilenetV2/expanded_conv_8/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 384, 64],
+          "name": "MobilenetV2/expanded_conv_8/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [576],
+          "name": "MobilenetV2/expanded_conv_11/depthwise/BatchNorm/FusedBatchNorm/Scaled"
+        },
+        {
+          "dtype": "float32",
+          "shape": [64],
+          "name": "MobilenetV2/expanded_conv_8/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 64, 384],
+          "name": "MobilenetV2/expanded_conv_9/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [384],
+          "name": "MobilenetV2/expanded_conv_9/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 384, 64],
+          "name": "MobilenetV2/expanded_conv_9/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [576],
+          "name": "MobilenetV2/expanded_conv_11/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [64],
+          "name": "MobilenetV2/expanded_conv_9/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 64, 384],
+          "name": "MobilenetV2/expanded_conv_10/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [384],
+          "name": "MobilenetV2/expanded_conv_10/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 384, 96],
+          "name": "MobilenetV2/expanded_conv_10/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [96],
+          "name": "MobilenetV2/expanded_conv_10/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 96, 576],
+          "name": "MobilenetV2/expanded_conv_11/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [384],
+          "name": "MobilenetV2/expanded_conv_10/depthwise/BatchNorm/FusedBatchNorm/Scaled"
+        },
+        {
+          "dtype": "float32",
+          "shape": [576],
+          "name": "MobilenetV2/expanded_conv_11/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 576, 96],
+          "name": "MobilenetV2/expanded_conv_11/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [96],
+          "name": "MobilenetV2/expanded_conv_11/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 96, 576],
+          "name": "MobilenetV2/expanded_conv_12/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [384],
+          "name": "MobilenetV2/expanded_conv_10/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [576],
+          "name": "MobilenetV2/expanded_conv_12/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 576, 96],
+          "name": "MobilenetV2/expanded_conv_12/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [96],
+          "name": "MobilenetV2/expanded_conv_12/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 96, 576],
+          "name": "MobilenetV2/expanded_conv_13/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [576],
+          "name": "MobilenetV2/expanded_conv_13/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [384],
+          "name": "MobilenetV2/expanded_conv_9/depthwise/BatchNorm/FusedBatchNorm/Scaled"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 576, 160],
+          "name": "MobilenetV2/expanded_conv_13/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [160],
+          "name": "MobilenetV2/expanded_conv_13/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 160, 960],
+          "name": "MobilenetV2/expanded_conv_14/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [960],
+          "name": "MobilenetV2/expanded_conv_14/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [384],
+          "name": "MobilenetV2/expanded_conv_9/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 960, 160],
+          "name": "MobilenetV2/expanded_conv_14/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [160],
+          "name": "MobilenetV2/expanded_conv_14/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 160, 960],
+          "name": "MobilenetV2/expanded_conv_15/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [960],
+          "name": "MobilenetV2/expanded_conv_15/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 960, 160],
+          "name": "MobilenetV2/expanded_conv_15/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [384],
+          "name": "MobilenetV2/expanded_conv_8/depthwise/BatchNorm/FusedBatchNorm/Scaled"
+        },
+        {
+          "dtype": "float32",
+          "shape": [160],
+          "name": "MobilenetV2/expanded_conv_15/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 160, 960],
+          "name": "MobilenetV2/expanded_conv_16/expand/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [960],
+          "name": "MobilenetV2/expanded_conv_16/expand/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 960, 320],
+          "name": "MobilenetV2/expanded_conv_16/project/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [384],
+          "name": "MobilenetV2/expanded_conv_8/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [320],
+          "name": "MobilenetV2/expanded_conv_16/project/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 320, 256],
+          "name": "aspp0/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [256],
+          "name": "aspp0/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 320, 256],
+          "name": "image_pooling/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [256],
+          "name": "image_pooling/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [384],
+          "name": "MobilenetV2/expanded_conv_7/depthwise/BatchNorm/FusedBatchNorm/Scaled"
+        },
+        {
+          "dtype": "float32",
+          "shape": [1, 1, 512, 256],
+          "name": "concat_projection/Conv2D_weights"
+        },
+        {
+          "dtype": "float32",
+          "shape": [256],
+          "name": "concat_projection/Conv2D_bn_offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [384],
+          "name": "MobilenetV2/expanded_conv_7/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [960],
+          "name": "MobilenetV2/expanded_conv_16/depthwise/BatchNorm/FusedBatchNorm/Scaled"
+        },
+        {
+          "dtype": "float32",
+          "shape": [960],
+          "name": "MobilenetV2/expanded_conv_16/depthwise/BatchNorm/FusedBatchNorm/Offset"
+        },
+        {
+          "dtype": "float32",
+          "shape": [960],
+          "name": "MobilenetV2/expanded_conv_15/depthwise/BatchNorm/FusedBatchNorm/Scaled"
+        }
+      ]
+    }
+  ],
+  "convertedBy": "TensorFlow.js Converter v2.0.1.post1"
+}
