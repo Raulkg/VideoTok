@@ -68,7 +68,7 @@ function TokChat(props) {
             return (
               <li key={i} className={item.classText}>
                 <div className="avatar">
-                  <img src="http://10.0.0.18:3001/images/user.png" />
+                  <img src="http://192.168.254.66:3001/images/user.png" />
                 </div>
                 <div className="messages">
                   <p>{item.msg}</p>

@@ -30,7 +30,7 @@ function TokTogether(props) {
     { msg: "Welcome", classText: "self", time: new Date() },
   ]);
   useEffect(() => {
-    fetch(`http://10.0.0.18:3001/apidata`, {
+    fetch(`http://192.168.254.66:3001/apidata`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -607,7 +607,7 @@ function TokTogether(props) {
       <video id="video" style={{ display: "none" }} playsInline></video>
       <canvas id="output"> </canvas>
       <canvas id="merge-output"> </canvas>
-      <img id="bg" src="http://10.0.0.18:3001/images/bg1.png" />
+      <img id="bg" src="http://192.168.254.66:3001/images/bg1.png" />
     </div>
   );
 
@@ -646,19 +646,19 @@ function TokTogether(props) {
   const backGroundDom = (
     <VerticalBox>
       <BgHolder
-        src="http://10.0.0.18:3001/images/bg.jpg"
+        src="http://192.168.254.66:3001/images/bg.jpg"
         onClick={(e) => replaceBg(e)}
       />
       <BgHolder
-        src="http://10.0.0.18:3001/images/bg1.png"
+        src="http://192.168.254.66:3001/images/bg1.png"
         onClick={(e) => replaceBg(e)}
       />
       <BgHolder
-        src="http://10.0.0.18:3001/images/bg2.png"
+        src="http://192.168.254.66:3001/images/bg2.png"
         onClick={(e) => replaceBg(e)}
       />
       <BgHolder
-        src="http://10.0.0.18:3001/images/bg3.png"
+        src="http://192.168.254.66:3001/images/bg3.png"
         onClick={(e) => replaceBg(e)}
       />
     </VerticalBox>

@@ -35,7 +35,7 @@ function TokRoom(props) {
     scene.add(light);
     var loader = new THREE.TextureLoader();
     var groundTexture = loader.load(
-      "http://10.0.0.18:3001/images/grasslight-big.jpg"
+      "http://192.168.254.66:3001/images/grasslight-big.jpg"
     );
     groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
     groundTexture.repeat.set(25, 25);

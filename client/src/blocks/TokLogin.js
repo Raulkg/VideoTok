@@ -13,7 +13,7 @@ function TokLogin(props) {
   let location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };
   const [requestId, setRequestId] = useState("");
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(true);
   const [twofactor, setTwofactor] = useState("");
   const layout = {
     labelCol: { span: 8 },
@@ -27,7 +27,7 @@ function TokLogin(props) {
     let pin = values.password;
 
     fetch(
-      `http://10.0.0.18:3001/validate/${requestId.request_id}?code=${pin}`,
+      `http://192.168.254.66:3001/validate/${requestId.request_id}?code=${pin}`,
       {
         method: "GET",
       }
@@ -56,7 +56,7 @@ function TokLogin(props) {
   };
 
   const requestOtp = () => {
-    fetch(`http://10.0.0.18:3001/verify`, {
+    fetch(`http://192.168.254.66:3001/verify`, {
       method: "GET",
     })
       .then((res) => res.json())

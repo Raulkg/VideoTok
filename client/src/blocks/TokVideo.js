@@ -11,7 +11,11 @@ import {
   FireOutlined,
   SlackOutlined,
 } from "@ant-design/icons";
+
 import * as bodyPix from "@tensorflow-models/body-pix";
+//import * as facemesh_module from '@tensorflow-models/facemesh';
+const facemesh_module = require('@tensorflow-models/facemesh');
+//import * as tf from '@tensorflow/tfjs';
 const { Meta } = Card;
 const OT = require("@opentok/client");
 var session;
@@ -19,6 +23,89 @@ var publisher;
 var bgImageData;
 var bgCanvas;
 var maskBackground = true;
+
+const defaultPoseNetArchitecture = 'MobileNetV1';
+const defaultQuantBytes = 2;
+const defaultMultiplier = 1.0;
+const defaultStride = 16;
+const defaultInputResolution = 200;
+
+const facePartName2Index = {
+    'topMid': 10,
+    'rightTop0': 67,
+    'rightTop1': 54,
+    'leftTop0': 297,
+    'leftTop1': 284,
+    'rightJaw0': 21,
+    'rightJaw1': 162,
+    'rightJaw2': 127,
+    'rightJaw3': 234,
+    'rightJaw4': 132,
+    'rightJaw5': 172,
+    'rightJaw6': 150,
+    'rightJaw7': 176,
+    'jawMid': 152,   // 0 - 8
+    'leftJaw7': 400,
+    'leftJaw6': 379,
+    'leftJaw5': 397,
+    'leftJaw4': 361,
+    'leftJaw3': 454,
+    'leftJaw2': 356,
+    'leftJaw1': 389,
+    'leftJaw0': 251, // 9 - 16
+    'rightBrow0': 46,
+    'rightBrow1': 53,
+    'rightBrow2': 52,
+    'rightBrow3': 65,
+    'rightBrow4': 55, // 17 - 21
+    'leftBrow4': 285,
+    'leftBrow3': 295,
+    'leftBrow2': 282,
+    'leftBrow1': 283,
+    'leftBrow0': 276, // 22 - 26
+    'nose0': 6,
+    'nose1': 197,
+    'nose2': 195,
+    'nose3': 5, // 27 - 30
+    'rightNose0': 48,
+    'rightNose1': 220,
+    'nose4': 4,
+    'leftNose1': 440,
+    'leftNose0': 278, // 31 - 35
+    'rightEye0': 33,
+    'rightEye1': 160,
+    'rightEye2': 158,
+    'rightEye3': 133,
+    'rightEye4': 153,
+    'rightEye5': 144, // 36 - 41
+    'leftEye3': 362,
+    'leftEye2': 385,
+    'leftEye1': 387,
+    'leftEye0': 263,
+    'leftEye5': 373,
+    'leftEye4': 380, // 42 - 47
+    'rightMouthCorner': 61,
+    'rightUpperLipTop0': 40,
+    'rightUpperLipTop1': 37,
+    'upperLipTopMid': 0,
+    'leftUpperLipTop1': 267,
+    'leftUpperLipTop0': 270,
+    'leftMouthCorner': 291, // 48 - 54
+    'leftLowerLipBottom0': 321,
+    'leftLowerLipBottom1': 314,
+    'lowerLipBottomMid': 17,
+    'rightLowerLipBottom1': 84,
+    'rightLowerLipBottom0': 91, // 55 - 59
+    'rightMiddleLip': 78,
+    'rightUpperLipBottom1': 81,
+    'upperLipBottomMid': 13,
+    'leftUpperLipBottom1': 311,
+    'leftMiddleLip': 308, // 60 - 64
+    'leftLowerLipTop0': 402,
+    'lowerLipTopMid': 14,
+    'rightLowerLipTop0': 178, // 65 - 67
+};
+
 function TokVideo(props) {
   const [bgProcess, setBgProcess] = useState(false);
   const [page, setPage] = useState(1);
@@ -28,7 +115,7 @@ function TokVideo(props) {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    fetch(`http://10.0.0.18:3001/apidata`, {
+    fetch(`http://192.168.254.66:3001/apidata`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -219,6 +306,12 @@ function TokVideo(props) {
       quantBytes: 2,
     });
 
+//facemesh_module.load().then(mdl => {
+//
+//    console.log("model loaded");
+//
+//});
+//   const facemesh = await facemesh_module.load();
     //more accurate
     //    const net = await bodyPix.load({
     //      architecture: "ResNet50",
@@ -245,6 +338,11 @@ function TokVideo(props) {
 
     getBgData(true);
     async function drawMaskRender() {
+
+//    const faceDetection = await facemesh.estimateFaces(videoElement);
+//    const faceDetection = await facemesh.estimateFaces(videoElement, false, true);
+
+
       const segmentation = await net.segmentPerson(videoElement, {
         flipHorizontal: false,
         internalResolution: "medium",
@@ -262,7 +360,7 @@ function TokVideo(props) {
         if (segmentation.allPoses[0]) {
           let rightWrist = segmentation.allPoses[0].keypoints[10];
           let leftWrist = segmentation.allPoses[0].keypoints[9];
-          console.log(rightWrist);
+          console.log(segmentation.allPoses[0]);
 
           if (leftWrist.score > 0.1) {
             document.getElementById("yes-button").style.left =
@@ -285,6 +383,14 @@ function TokVideo(props) {
           }
         }
 
+//              faceDetection.forEach(face => {
+//              console.log(face)
+//                Object.values(facePartName2Index).forEach(index => {
+//                    let p = face.scaledMesh[index];
+//                    drawPoint(canvas, p[1], p[0], 2, 'red');
+//                });
+//              });
+
       bodyPix.drawMask(
         canvas,
         videoElement,
@@ -296,6 +402,13 @@ function TokVideo(props) {
       requestAnimationFrame(drawMaskRender);
     }
     drawMaskRender();
+  }
+
+   function drawPoint(ctx, y, x, r, color) {
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, 2 * Math.PI);
+    ctx.fillStyle = color;
+    ctx.fill();
   }
 
   async function getBgData(isTransparent) {
@@ -481,7 +594,7 @@ function TokVideo(props) {
       <video id="video" style={{ display: "none" }} playsInline></video>
       <canvas id="output"> </canvas>
       <canvas id="merge-output"> </canvas>
-      <img id="bg" src="http://10.0.0.18:3001/images/bg1.png" />
+      <img id="bg" src="http://192.168.254.66:3001/images/bg1.png" />
     </div>
   );
 
@@ -531,19 +644,19 @@ function TokVideo(props) {
   const backGroundDom = (
     <VerticalBox>
       <BgHolder
-        src="http://10.0.0.18:3001/images/bg.jpg"
+        src="http://192.168.254.66:3001/images/bg.jpg"
         onClick={(e) => replaceBg(e)}
       />
       <BgHolder
-        src="http://10.0.0.18:3001/images/bg1.png"
+        src="http://192.168.254.66:3001/images/bg1.png"
         onClick={(e) => replaceBg(e)}
       />
       <BgHolder
-        src="http://10.0.0.18:3001/images/bg2.png"
+        src="http://192.168.254.66:3001/images/bg2.png"
         onClick={(e) => replaceBg(e)}
       />
       <BgHolder
-        src="http://10.0.0.18:3001/images/bg3.png"
+        src="http://192.168.254.66:3001/images/bg3.png"
         onClick={(e) => replaceBg(e)}
       />
     </VerticalBox>

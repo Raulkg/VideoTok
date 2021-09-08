@@ -44,9 +44,7 @@ function TokMenu(props) {
         <Menu.Item key="1" icon={<VideoCameraOutlined />}>
           Video API Demo
         </Menu.Item>
-        <Menu.Item key="2" icon={<PhoneOutlined />}>
-          Voice API Demo
-        </Menu.Item>
+
 
         <Menu.Item key="3" icon={<ThunderboltOutlined />}>
           UseCase Demo

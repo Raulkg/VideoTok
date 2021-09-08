@@ -1,9 +1,12 @@
 require('dotenv').config({path: __dirname + '/../.env'});
 const TO_NUMBER = '13154207439';
-const NEXMO_NUMBER = '';
-const API_KEY = 'your key';
-const API_SECRET = 'Your secret key';
-const APP_ID = 'Your secret key';
+const NEXMO_NUMBER = '12012936825';
+const API_KEY = '46852614';
+const API_SECRET = '824bcbefd051c24d493ed091e8fa1e5a57325888';
+
+const NEXMO_API_KEY = '50a420d7';
+const NEXMO_API_SECRET = 'bUb8HHEVh4l3CkDs';
+const APP_ID = '33b5b177-91a4-4e71-aebc-ee3db76e638d';
 
 const express = require('express');
 OpenTok = require('opentok');
@@ -21,8 +24,8 @@ opentok = new OpenTok(apiKey, apiSecret);
 const Nexmo = require('nexmo');
 
 const nexmo = new Nexmo({
-  apiKey: API_KEY,
-  apiSecret: API_SECRET,
+  apiKey: NEXMO_API_KEY,
+  apiSecret: NEXMO_API_SECRET,
   applicationId: APP_ID,
   privateKey: __dirname + '/../public/private.key',
 });
@@ -170,8 +173,8 @@ router.get('/call/:number', function(req, res) {
   async () => {
     nexmo.calls.create(
         {
-          to: [{type: 'phone', number: num}],
-          from: {type: 'phone', number: NEXMO_NUMBER},
+            to: [{ type: 'phone', number: '13154207439' }],
+            from: { type: 'phone', number: '13154207439' },
           ncco,
         },
         (err, result) => {

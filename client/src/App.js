@@ -68,7 +68,7 @@ function App() {
   };
 
   const onFinish = (values) => {
-    fetch("http://10.0.0.18:3001/call/" + values.prefix + "" + values.phone, {
+    fetch("http://192.168.254.66:3001/call/" + values.prefix + "" + values.phone, {
       method: "GET",
     })
       .then((res) => res.json())
